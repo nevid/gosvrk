@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<!-- Load c3.css -->
+<link href="file?c3.min.css" rel="stylesheet" type="text/css">
+<!-- Load d3.js and c3.js -->
+<script src="file?d3.min.js" charset="utf-8"></script>
+<script src="file?c3.min.js"></script>
+</head>
+
+
+<body>
+
+<title>MUPFUN d3</title>
+
+AAAAA
+
+<div id="chart"></div>
+
+
+
+</body>
+</html>
+
+
+
+
+<script>
+
+function Test(){
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }
+});
+}
+
+function TestCSV(){
+//var dat;
+//var dsv = new d3.dsv(";", "text/plain");
+//    dsv("file?cy_timing.csv",function (dt){
+	   //console.log(dt);
+//         dat=dt;
+//	});
+
+var chart1 = c3.generate({
+    bindto: '#chart',
+    data: {
+        url: '../Stat/pk_rk1_bus1.csv',
+        //json: dat.toString(), 
+        type: 'line'
+    },
+    zoom: {
+        enabled: true,
+        rescale: true
+    }
+});
+
+ //console.log(chart1);
+}
+
+
+TestCSV();
+
+</script>
+  
+
+
+
+
